@@ -60,7 +60,7 @@
                 android:id="@+id/paveikslas"
                 android:layout_width="50dp"
                 android:layout_height="50dp"
-                android:src="@drawable/settings"
+                android:src="@drawable/cart96"
                 android:layout_centerVertical="true"
                 />
 
@@ -100,17 +100,6 @@
 
 
 
-        <Button
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="20dp"
-            android:layout_below="@+id/left_drawer"
-            android:text="Kita komanda" />
-        <CheckBox
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentBottom="true"
-            android:text="Isiminti" />
 
     </RelativeLayout>
 

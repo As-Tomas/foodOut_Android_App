@@ -45,10 +45,13 @@ public class MainActivity extends AppCompatActivity {
         getSupportActionBar().setHomeButtonEnabled(true);
 
         //Sukrausime listView meniu komandas hamburgeryje
-        DataModel[] drawerItems = new DataModel[3];
-        drawerItems[0] = new DataModel(R.drawable.delfi, mNavigationDrawerItemTitles[0]);
-        drawerItems[1] = new DataModel(R.drawable.lrytas, mNavigationDrawerItemTitles[1]);
-        drawerItems[2] = new DataModel(R.drawable.calculate, mNavigationDrawerItemTitles[2]);
+        DataModel[] drawerItems = new DataModel[6];
+        drawerItems[0] = new DataModel(R.drawable.flag96, mNavigationDrawerItemTitles[0]);
+        drawerItems[1] = new DataModel(R.drawable.chefhat96, mNavigationDrawerItemTitles[1]);
+        drawerItems[2] = new DataModel(R.drawable.discount96, mNavigationDrawerItemTitles[2]);
+        drawerItems[3] = new DataModel(R.drawable.adduser96, mNavigationDrawerItemTitles[3]);
+        drawerItems[4] = new DataModel(R.drawable.help96, mNavigationDrawerItemTitles[4]);
+        drawerItems[5] = new DataModel(R.drawable.user96, mNavigationDrawerItemTitles[5]);
 
         DrawerItemCustomAdapter adapter = new DrawerItemCustomAdapter(this, R.layout.list_view_item_row, drawerItems);
         mDrawerList.setAdapter(adapter);
@@ -79,6 +82,9 @@ public class MainActivity extends AppCompatActivity {
     }
 
 
+
+
+
     public void rodytiSvetaine(int pos){
         WebView web=findViewById(R.id.webas);
         web.getSettings().setJavaScriptEnabled(true); // enable javascript
@@ -94,11 +100,7 @@ public class MainActivity extends AppCompatActivity {
 
         switch (pos) {
             case 0:
-                web.loadUrl("https://www.delfi.lt");
-                break;
-            case 1:
-                //paspausta lrytas
-                web.loadUrl("https://www.lrytas.lt");
+                web.loadUrl("https://www.google.com");
                 break;
             case 2:
                 //paspausta Skaiciuoti

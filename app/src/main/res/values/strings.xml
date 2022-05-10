@@ -1,3 +1,12 @@
 <resources>
-    <string name="app_name">foodOut</string>
+    <string name="app_name">FoodOut</string>
+
+    <string-array name="navigation_drawer_items_array">
+        <item>Chose your country</item>
+        <item>List of Restorans</item>
+        <item>Discounts</item>
+        <item>Registration</item>
+        <item>About project</item>
+        <item>Login</item>
+    </string-array>
 </resources>
