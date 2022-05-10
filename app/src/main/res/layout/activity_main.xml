@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- aplikacija su hamburgeriu dedama i DrawerLayout -->
+<androidx.drawerlayout.widget.DrawerLayout
+    android:id="@+id/drawer_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+    <!-- pagrindinio activity vaizdas su toolbar (virsutine dalis) -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <!-- cia pakraunamas pats toolbar, melyna virsutine dalis -->
+        <LinearLayout
+            android:id="@+id/container_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <include
+                android:id="@+id/toolbar"
+                layout="@layout/toolbar" />
+        </LinearLayout>
+        <!-- pagrindinio activity vaizdas be toolbar -->
+        <!-- visas "baltas" vaizdas -->
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <WebView
+                android:id="@+id/webas"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+            </WebView>
+        </ScrollView>
+    </LinearLayout>
+
+    <!-- paneles vaizdas ir meniu komandos -->
+    <!-- navigation drawer (hamburger panele) -->
+    <RelativeLayout
+        android:layout_width="280dp"
+        android:layout_height="match_parent"
+        android:id="@+id/drawerPane"
+        android:background="#ffffff"
+        android:layout_gravity="start">
+
+        <!--melyna tamsi virsutine dalis -->
+        <RelativeLayout
+            android:id="@+id/drawer_virsus"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:background="#000080"
+            android:padding="8dp" >
+
+            <ImageView
+                android:id="@+id/paveikslas"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@drawable/settings"
+                android:layout_centerVertical="true"
+                />
+
+            <TextView
+                android:id="@+id/pavadinimas"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/paveikslas"
+                android:text="Settings"
+                android:layout_marginTop="20dp"
+                android:layout_marginLeft="20dp"
+                android:textColor="#fff"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/paveikslas"
+                android:layout_below="@+id/pavadinimas"
+                android:layout_gravity="bottom"
+                android:layout_marginTop="4dp"
+                android:layout_marginLeft="20dp"
+                android:text="Choose action"
+                android:textColor="#fff"
+                android:textSize="12sp" />
+
+        </RelativeLayout>
+        <!-- Meniu komandos -->
+        <ListView
+            android:id="@+id/left_drawer"
+            android:layout_width="280dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/drawer_virsus"
+            android:choiceMode="singleChoice"
+            android:background="#ffffff" />
+
+
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            android:layout_below="@+id/left_drawer"
+            android:text="Kita komanda" />
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:text="Isiminti" />
+
+    </RelativeLayout>
+
+</androidx.drawerlayout.widget.DrawerLayout>
