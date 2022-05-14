@@ -36,7 +36,7 @@ public class AboutFragment extends Fragment {
             }
         });
 
-        webview1.loadUrl("https://github.com/As-Tomas/foodOut_Android_App");
+        webview1.loadUrl("https://github.com/As-Tomas/foodOut_Android_App/tree/Clean_version1");
 
         return view;
     }
