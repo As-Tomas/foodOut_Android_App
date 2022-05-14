@@ -26,17 +26,13 @@
         </LinearLayout>
         <!-- pagrindinio activity vaizdas be toolbar -->
         <!-- visas "baltas" vaizdas -->
-        <ScrollView
+        <FrameLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="match_parent"
+            android:id="@+id/frame">
 
-            <WebView
-                android:id="@+id/webas"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent">
 
-            </WebView>
-        </ScrollView>
+        </FrameLayout>
     </LinearLayout>
 
     <!-- paneles vaizdas ir meniu komandos -->

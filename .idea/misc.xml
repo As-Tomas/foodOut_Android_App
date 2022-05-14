@@ -5,8 +5,19 @@
       <map>
         <entry key="..\:/Users/kalia/AndroidStudioProjects/Praktikavimuisi/foodOut/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.1345" />
         <entry key="..\:/Users/kalia/AndroidStudioProjects/Praktikavimuisi/foodOut/app/src/main/res/drawable/ic_launcher_background.xml" value="0.1345" />
-        <entry key="..\:/Users/kalia/AndroidStudioProjects/Praktikavimuisi/foodOut/app/src/main/res/layout/activity_main.xml" value="0.1" />
+        <entry key="..\:/Users/kalia/AndroidStudioProjects/Praktikavimuisi/foodOut/app/src/main/res/layout/activity_main.xml" value="0.25" />
+        <entry key="..\:/Users/kalia/AndroidStudioProjects/Praktikavimuisi/foodOut/app/src/main/res/layout/activity_registration.xml" value="0.25" />
+        <entry key="..\:/Users/kalia/AndroidStudioProjects/Praktikavimuisi/foodOut/app/src/main/res/layout/activity_tab.xml" value="0.33" />
+        <entry key="..\:/Users/kalia/AndroidStudioProjects/Praktikavimuisi/foodOut/app/src/main/res/layout/fragment_about.xml" value="0.22239583333333332" />
+        <entry key="..\:/Users/kalia/AndroidStudioProjects/Praktikavimuisi/foodOut/app/src/main/res/layout/fragment_login.xml" value="0.4114583333333333" />
+        <entry key="..\:/Users/kalia/AndroidStudioProjects/Praktikavimuisi/foodOut/app/src/main/res/layout/fragment_main_restorans.xml" value="0.1984375" />
+        <entry key="..\:/Users/kalia/AndroidStudioProjects/Praktikavimuisi/foodOut/app/src/main/res/layout/fragment_pick_up.xml" value="0.39739583333333334" />
+        <entry key="..\:/Users/kalia/AndroidStudioProjects/Praktikavimuisi/foodOut/app/src/main/res/layout/fragment_register.xml" value="0.4114583333333333" />
+        <entry key="..\:/Users/kalia/AndroidStudioProjects/Praktikavimuisi/foodOut/app/src/main/res/layout/fragment_tab.xml" value="0.4114583333333333" />
+        <entry key="..\:/Users/kalia/AndroidStudioProjects/Praktikavimuisi/foodOut/app/src/main/res/layout/fragment_tab2.xml" value="0.4114583333333333" />
+        <entry key="..\:/Users/kalia/AndroidStudioProjects/Praktikavimuisi/foodOut/app/src/main/res/layout/fragment_tab_delivery.xml" value="0.39739583333333334" />
         <entry key="..\:/Users/kalia/AndroidStudioProjects/Praktikavimuisi/foodOut/app/src/main/res/layout/list_view_item_row.xml" value="0.358695652173913" />
+        <entry key="..\:/Users/kalia/AndroidStudioProjects/Praktikavimuisi/foodOut/app/src/main/res/layout/restorans_list_item.xml" value="0.4114583333333333" />
         <entry key="..\:/Users/kalia/AndroidStudioProjects/Praktikavimuisi/foodOut/app/src/main/res/layout/toolbar.xml" value="0.2125" />
       </map>
     </option>

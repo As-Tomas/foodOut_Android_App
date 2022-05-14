@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+android:layout_width="match_parent"
+android:layout_height="wrap_content"
+android:layout_margin="10dp"
+android:orientation="vertical"
+xmlns:android="http://schemas.android.com/apk/res/android">
+
+<TextView
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:text="MANO INFORMACIJA"
+    android:layout_gravity="start"/>
+<View
+    android:layout_width="match_parent"
+    android:layout_height="2px"
+    android:background="#ff0055"
+    android:color="#393239"
+    />
+
+<EditText
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:text="Name"
+    android:id="@+id/name"/>
+<EditText
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:text="e-mail"
+    android:id="@+id/email"/>
+<EditText
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:text="Phone number"
+    android:id="@+id/phone"/>
+<EditText
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:text="password"
+    android:id="@+id/password"/>
+
+<Button
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="Register"
+    android:layout_marginTop="25dp"
+    android:layout_gravity="center"
+    android:id="@+id/register"/>
+
+
+</LinearLayout>
