@@ -38,9 +38,6 @@ public class MainActivity extends AppCompatActivity implements RegisterFragment.
     ArrayList arrUsers;
     Boolean userLoggedIn;
 
-
-
-
     private String mNavigationDrawerItemTitles[];//hamburgerio meniu komandu pavadinimu masyvas (listview)
     private DrawerLayout mDrawerLayout;
     private ListView mDrawerList;
@@ -53,9 +50,6 @@ public class MainActivity extends AppCompatActivity implements RegisterFragment.
         super.onCreate(savedInstanceState);
         userLoggedIn = false;
         setContentView(R.layout.activity_main);
-
-
-
 
         Toolbar toolbar = findViewById(R.id.toolbar);
 
@@ -90,7 +84,6 @@ public class MainActivity extends AppCompatActivity implements RegisterFragment.
 
         setupDrawerToggle();
 
-
         //Pirmo fragmento pakrovimas--------------------------------------------------------------------------
         if(findViewById(R.id.frame) != null) {
             if (savedInstanceState != null) {
@@ -99,18 +92,6 @@ public class MainActivity extends AppCompatActivity implements RegisterFragment.
             // Sukuriam pirmaji fragmenta
             RegisterFragment regFragment = new RegisterFragment();
             MainRestoransFragment mainRestFragment = new MainRestoransFragment();
-            // dar galima pasinaudoti ir default per new instance pvz
-            //AntrasFragment secondFragment = AntrasFragment.newInstance();
-
-            //Galimybe nusiusti pirmam fragmentui parametrus
-            //jei sita Activity butu ne pagrindine ir gautu parametrus
-            //is ankstesnes Activity per Intent
-            //firstFragment.setArguments(getIntent().getExtras());
-
-            //Jei siaip perduot, galima ir taip:
-            //Bundle b=new Bundle();
-            //b.putInt("sk1",20);
-            //firstFragment.setArguments(b);
 
             // Prideti fragmenta i MainActivity Layout (FrameLayout)
             getSupportFragmentManager().beginTransaction().
@@ -169,9 +150,6 @@ public class MainActivity extends AppCompatActivity implements RegisterFragment.
                 FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
                 //Sukeiciam fragmentus
                 transaction.replace(R.id.frame, mainRestoranFragment,"MY_FRAGMENT");
-                //Pirma "varom" i steka. Useris tada su "Back" mygtuku gali grizt i pirma fragmenta
-                //transaction.addToBackStack(null);
-                // Patvirtinam tranzakcija
                 transaction.commit();
                 break;
             case 2: // Discounts
@@ -181,7 +159,6 @@ public class MainActivity extends AppCompatActivity implements RegisterFragment.
                 break;
             case 3: //Registration
 
-                Log.i("kokia bukle", userLoggedIn.toString());
                 if (!userLoggedIn) {
                     RegisterFragment regFragment = new RegisterFragment(); //kursime antra fragmenta
                     getSupportFragmentManager().beginTransaction().replace(R.id.frame, regFragment).commit();
@@ -207,7 +184,7 @@ public class MainActivity extends AppCompatActivity implements RegisterFragment.
         }
         mDrawerList.setItemChecked(pos, true);
         mDrawerList.setSelection(pos);//paliks pasirinkto spalva
-        if (pos != 3 ) {
+        if (pos != 3 ) { // to handle logged inn users
             getSupportActionBar().setTitle(mNavigationDrawerItemTitles[pos]);
         }
         mDrawerLayout.closeDrawer(mDrawerPane);
@@ -224,7 +201,6 @@ public class MainActivity extends AppCompatActivity implements RegisterFragment.
     }
 
     public JSONArray readDB() throws JSONException {
-
 
         if(isExternalStorageWritable()==false){
             Toast.makeText(this,"Negalima pasiekti isorines atminties",Toast.LENGTH_SHORT).show();
@@ -248,11 +224,8 @@ public class MainActivity extends AppCompatActivity implements RegisterFragment.
                 e.printStackTrace();
             }
         } else {
-
-            System.out.println("CANT READ FILE or no file ****************************************************************");
-           Toast.makeText(this, "No ussers registered",Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "No ussers registered",Toast.LENGTH_SHORT).show();
         }
-        System.out.println("----------------------------------------------------Failas nuskaitytas--------------------------------------------------------------------------");
         System.out.println(content);
 
         JSONArray arrfromFile = new JSONArray();
@@ -275,15 +248,13 @@ public class MainActivity extends AppCompatActivity implements RegisterFragment.
 
                 String state = Environment.getExternalStorageState();
                 if (Environment.MEDIA_MOUNTED.equals(state)) {
-                    System.err.println("Permision is give to read******************************** "+state);
+                    System.out.println("Permision is give to read: "+state);
                 }
 
                 String path = getExternalFilesDir(null) + "/FoodOut";
                 File myDir = new File(path);
-                System.out.println("Creating file here******************************** "+myDir);
                 if (!myDir.exists()) {
                     myDir.mkdirs();
-                    System.err.println("Sukure kataloga ******************************** "+myDir);
                 }
 
                 File files = new File(path,"users.txt");
@@ -297,7 +268,7 @@ public class MainActivity extends AppCompatActivity implements RegisterFragment.
                 e.printStackTrace();
             }
         } else {
-            System.err.println(" No Permision to write ************************************************* isExternalStorageWritable()");
+            System.err.println(" No Permision to write isExternalStorageWritable()");
         }
     }
 

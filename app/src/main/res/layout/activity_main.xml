@@ -1,19 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- aplikacija su hamburgeriu dedama i DrawerLayout -->
 <androidx.drawerlayout.widget.DrawerLayout
     android:id="@+id/drawer_layout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:android="http://schemas.android.com/apk/res/android">
 
-
-    <!-- pagrindinio activity vaizdas su toolbar (virsutine dalis) -->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical">
 
-        <!-- cia pakraunamas pats toolbar, melyna virsutine dalis -->
         <LinearLayout
             android:id="@+id/container_toolbar"
             android:layout_width="match_parent"
@@ -24,8 +20,7 @@
                 android:id="@+id/toolbar"
                 layout="@layout/toolbar" />
         </LinearLayout>
-        <!-- pagrindinio activity vaizdas be toolbar -->
-        <!-- visas "baltas" vaizdas -->
+
         <FrameLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
@@ -35,8 +30,6 @@
         </FrameLayout>
     </LinearLayout>
 
-    <!-- paneles vaizdas ir meniu komandos -->
-    <!-- navigation drawer (hamburger panele) -->
     <RelativeLayout
         android:layout_width="280dp"
         android:layout_height="match_parent"
@@ -44,7 +37,6 @@
         android:background="#ffffff"
         android:layout_gravity="start">
 
-        <!--melyna tamsi virsutine dalis -->
         <RelativeLayout
             android:id="@+id/drawer_virsus"
             android:layout_width="match_parent"
@@ -85,7 +77,7 @@
                 android:textSize="12sp" />
 
         </RelativeLayout>
-        <!-- Meniu komandos -->
+
         <ListView
             android:id="@+id/left_drawer"
             android:layout_width="280dp"
@@ -93,10 +85,6 @@
             android:layout_below="@+id/drawer_virsus"
             android:choiceMode="singleChoice"
             android:background="#ffffff" />
-
-
-
-
     </RelativeLayout>
 
 </androidx.drawerlayout.widget.DrawerLayout>

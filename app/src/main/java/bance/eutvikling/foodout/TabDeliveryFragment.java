@@ -18,11 +18,6 @@ import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
-/**
- * A simple {@link Fragment} subclass.
- * Use the {@link TabDeliveryFragment#newInstance} factory method to
- * create an instance of this fragment.
- */
 public class TabDeliveryFragment extends Fragment {
 
     public interface CheckIfLoggedIn{
@@ -79,8 +74,6 @@ public class TabDeliveryFragment extends Fragment {
         boolean loggedIn = false;
 
         loggedIn = mCallback.checkIfLoggedIn();
-
-
 
         TableLayout lentele=getActivity().findViewById(R.id.lentele);
 

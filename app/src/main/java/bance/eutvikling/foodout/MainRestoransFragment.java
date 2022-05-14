@@ -16,19 +16,6 @@ import java.util.ArrayList;
 
 public class MainRestoransFragment extends Fragment {
 
-    //dependenci ijection
-    // galima butu pasiskelbti ir Contexta ir permesti i ji main activity tai butu dependenci ijection nereiketu interveiso ir galetume viska pasiekti is main activity bet nerekomenduojama
-
-    /*
-     * Eiliskumas
-     * pasiskelbem interfeisa ir interfeiso kintamaji
-     * overaidinam onAtach funkcija kad galetume pasimti Context, galim ir per kostruktoriu bet darom taip
-     * overaidinam onDetach ir nunulinam calbaka
-     * overaidinam onVieCreated ir susikuriam ka darys paspaudus knopke pvz iskvies implementuota funkcija
-     * MainAct implementuojam ir overaidinam metoda ir MainAct pakraunam pirma fragmenta ir jai reikia perduodam duomenis
-     * */
-
-
     public MainRestoransFragment() {
         // Required empty public constructor
     }
